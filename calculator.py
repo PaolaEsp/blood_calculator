@@ -15,6 +15,7 @@ def interface():
 def LDL_driver():
     LDL_result = LDL_input()
     LDL_analysis = analyze_LDL_result(LDL_result)
+    output_LDL_analysis(LDL_result, LDL_analysis)
 def LDL_input():
     LDL_input = input("Enter the LDL test result: ")
     return int(LDL_input)
@@ -27,6 +28,9 @@ def analyze_LDL_result(LDL_test_result):
         return "High"
     elif LDL_test_result >= 190:
         return "Very high"
+def output_LDL_analysis(test_result, analysis):
+    print("The LDL result is {}".format(test_result))
+    print("That is {}".format(analysis))
 
 def HDL_driver():
     # Get input
