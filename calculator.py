@@ -12,15 +12,24 @@ def interface():
 
 def HDL_driver():
     # Get input
-    result = get_input()
-    def user_input():
-        choice1 = input("Enter your choice: ")
+    HDL_result = get_input()
+    HDL_analysis = analyze_HDL_result(HDL_result)
+    def get_input():
+        HDL_input = input("Enter your choice: ")
         return int(HDL_input())
 
     # Check if HDL is normal
-    def normality():
+    def analyze_HDL_result(HDL_test_value):
+        if HDL_test_value >= 60:
+            return "Normal"
+        elif 40 <= HDL_test_value < 60:
+            return "Borderline Low"
+        else:
+            return "Low"
 
     # Output
+
+
 
 
 
